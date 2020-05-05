@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="./js/main.js"></script>
+        <script src="https://kit.fontawesome.com/26d639ee5e.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./css/login.css">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/form.css">
+        <script src="js/acessoADM.js"></script>
+        <title>Login</title>
+    </head>
+
+    <body>
+        <header class="header">
+            <div class="logo">
+                <img href="index.html" src="./img/logo1.png">
+            </div>
+            <input class="menu-btn" type="checkbox" id="menu-btn" />
+            <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+            <ul class="menu">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./contact.html">Contato</a></li>
+                <li><a href="./login.html"><i class="fas fa-user"></i> Login</a></li>
+            </ul>
+        </header>
+
+        <section class="section-login">
+            <div class="login text" id="home">
+                <h1>LOGIN</h1>
+                <form action="" method="post">
+                    <div>
+                        <label>Usuário</label>
+                        <input type="text" name="email" id="email" placeholder="Insira seu email">
+                        <i id="icone" class="fa fa-envelope icone"></i>
+                    </div>
+                    <div>
+                        <label>Senha</label>
+                        <input type="password" name="senha" id="senha" placeholder="Insira sua senha">
+                        <i id="icone" class="fa fa-lock icone"></i>
+                    </div>
+                    <button class="btnform" onclick="acesso(this.form)">Entrar</button>
+
+                </form>
+                <div class="link">
+                    <a href="forgot.html">Esqueceu sua senha?</a>
+                    <a href="#" onclick="onoff()">Ainda não possui cadastro?</a>
+                </div>
+            </div>
+        </section>
+
+        <!--Modal-->
+        <div id="modal" class="hide modal">
+            <div class="balao">
+                <h1>Cadastrar</h1>
+                <form action="" class="register" method="post">
+                    <div class="input_wrapper">
+                        <label for="">Nome Completo</label>
+                        <input type="text" name="nome">
+                    </div>
+
+                    <div class="input_wrapper">
+                        <label for="">CPF/CNPJ</label>
+                        <input type="number" name="documento">
+                    </div>
+
+                    <div class="input_wrapper">
+                        <label for="">Telefone</label>
+                        <input type="number" name="telefone">
+                    </div>
+
+                    <div class="input_wrapper">
+                        <label for="">Celular</label>
+                        <input type="number" name="celular">
+                    </div>
+
+                    <div class="input_wrapper">
+                        <label for="">Tipo</label>
+                        <select id="">
+                            <option value="motorista">Motorista</option>
+                            <option value="proprietario">Proprietario</option>
+                        </select>
+                    </div>
+
+                    <div class="input_wrapper">
+                        <label for="">Email</label>
+                        <input type="text" name="email">
+                    </div>
+
+                    <div class="input_wrapper">
+                        <label for="">Cidade</label>
+                        <input type="text" name="cidade">
+                    </div>
+
+                    <div class="input_wrapper">
+                        <label for="">Rua</label>
+                        <input type="text" name="rua">
+                    </div>
+
+                    <div class="input_wrapper">
+                        <label for="">Numero</label>
+                        <input type="number" name="numero">
+                    </div>
+
+                    <div class="input_wrapper">
+                        <label for="">Complemento</label>
+                        <input type="text" name="complemento">
+                    </div>
+
+                    <div class="input_wrapper">
+                        <label for="">CEP</label>
+                        <input type="text" name="CEP">
+                    </div>
+
+                    <div class="input_wrapper">
+                        <label for="">Bairro</label>
+                        <input type="text" name="Bairro">
+                    </div>
+                </form>
+
+                <div class="interactive">
+                    <button class="voltar"><a href="#" onclick="onoff()">Voltar</a></button>
+                    <button onclick="ValidarUsuario()">Enviar</button>
+                </div>
+            </div>
+
+            </form>
+        </div>
+        </div>
+    </body>
+
+</html>
+<script src="https://kit.fontawesome.com/26d639ee5e.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/main.js"></script>

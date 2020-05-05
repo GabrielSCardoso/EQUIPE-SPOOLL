@@ -1,0 +1,133 @@
+* {
+    --cor-bg-principal: rgba(16, 180, 209, 0.486);
+}
+
+body {
+    background-image: url(../img/parking-lot-line-striping.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.section-login,
+.forgot {
+    display: flex;
+    color: #fff;
+}
+
+.login,
+.forgot>div {
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.616);
+    padding: 30px;
+    width: 23%;
+    min-width: 300px;
+    border-radius: 40px 0 40px 0;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 45px 0px, rgba(0, 0, 0, 0.03) 0px 61px 67px 0px;
+}
+
+.text h1 {
+    font-size: 24px;
+    text-align: center;
+    margin: 10px;
+}
+
+.login h1 {
+    letter-spacing: 2px;
+}
+
+.text form {
+    width: 100%;
+}
+
+.login h1,
+label {
+    font-weight: bolder;
+}
+
+.login label {
+    display: block;
+}
+
+.text input {
+    padding-left: 30px;
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    height: 40px;
+    display: block;
+    border: none;
+    border-bottom: 1px solid #fff;
+    background-color: transparent;
+    outline: none;
+    color: #fff;
+    font-size: 14px;
+}
+
+::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.text button,
+.login button {
+    width: 100%;
+    /* margin: 15px auto; */
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    font-size: 18px;
+    font-weight: bolder;
+    transition: all 0.5s;
+    outline: none;
+}
+
+.text input:focus {
+    border-bottom: 1px solid var(--cor-bg-principal);
+}
+
+.btnform:hover {
+    background: var(--cor-bg-principal);
+    color: #fff;
+}
+
+.text a {
+    display: block;
+    margin: 5px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 2px 2px 2px black;
+    color: #fff;
+    transition: all 0.2s;
+}
+
+.text a:hover {
+    color: var(--cor-bg-principal);
+}
+
+.text .read {
+    padding: 0px !important;
+    text-align: none !important;
+    margin: 0 !important;
+}
+
+.text .icone {
+    bottom: 30px;
+    left: 5px;
+    position: relative;
+    color: #fff;
+}
+
+.link {
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+    margin: 10px 0 0 0;
+    font-weight: bold;
+    font-size: 12px;
+    color: white;
+    transition: 0.2s;
+}
+
+.login a:hover,
+.link a:hover {
+    color: var(--cor-bg-principal);
+}

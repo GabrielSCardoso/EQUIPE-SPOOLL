@@ -1,0 +1,273 @@
+body
+{
+    margin: 0;
+    padding: 0;
+
+    background-image: url(https://pngimage.net/wp-content/uploads/2018/06/fundo-degrade-png-3.png);
+    background-size: cover;
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+.login
+{
+    width: 340px;
+    height: 420px;
+
+    border: 2px solid rgba(0, 0, 0, 0.178);
+    border-radius: 100px 0 100px 0;
+
+    color: white;
+    background-color: rgba(0, 0, 0, 0.397);
+
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+
+    box-sizing: border-box;
+    padding: 68px 28px;
+}
+
+.usuario
+{
+    border-radius: 50%;
+
+    position: absolute;
+    top: -50px;
+    left: 112px;
+}
+
+h1
+{
+    margin: 0;
+
+    padding: 0;
+    padding-left: 20px;
+    padding-bottom: 30px;
+
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    text-align: center;
+
+    font-size: 25px;
+}
+
+.login p
+{   
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+    font-weight: bold;
+    color: rgba(255, 254, 254, 0.938);
+}
+
+.login input
+{
+    margin: 0;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 10px 10px 10px 10px;
+    width: 100%;
+}
+
+.login input[type="text"], input[type="password"]
+{
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.438);
+    background: transparent;
+    height: 40px;
+    outline: none;
+    font-size: 16px;
+}
+.login input[type="text"]::placeholder, input[type="password"]::placeholder
+{
+    color: rgba(255, 255, 255, 0.575);
+}
+
+.login button
+{
+    margin-left: 40px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+    background:rgba(245, 246, 247, 0.753);
+    height: 30px;
+    width: 200px;
+    font-size: 20px;
+    transition: 0.2s;
+}
+
+.login button:hover
+{
+    background:rgba(16, 180, 209, 0.486);
+    color: white;
+
+    transition: 0.2s;
+}
+
+.link a
+{
+    line-height: 20px;
+    margin: 10px;
+    text-decoration: none;
+    display: contents;
+    font-weight: bold;
+    font-size: 12px;
+    color: white;
+    transition: 0.2s;
+}
+
+.link a:hover
+{
+    color: rgb(41, 124, 248);
+    transition: 0.2s;
+}
+
+
+/*Modal*/
+
+#modal {
+    background: rgba(3, 74, 87, 0.747);
+    color: #fff;
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#modal.addScroll {
+    overflow: auto;
+}
+
+#modal .content {
+    margin-top: 0;
+    color: white;
+}
+
+#modal .content h1 {
+    text-transform: uppercase;
+}
+
+#modal form {
+    width: 80%;
+    max-width: 600px;
+
+    margin: 0 auto 30px;
+
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+.content form div:nth-child(3),
+.content form div:nth-child(4),
+.content form div:nth-child(5) {
+    grid-column: span 2;
+}
+
+
+
+form input,
+form textarea {
+    width: 100%;
+
+    padding: 12px;
+
+    box-sizing: border-box;
+
+    border-radius: 6px;
+    border: 1px solid rgba(3, 74, 87, 0.5);
+    
+    outline: none;
+
+    font-size: 16px;
+}
+
+form label {
+    font-weight: 300;
+    line-height: 32px;
+    letter-spacing: 0.2px;
+}
+
+form a {
+    width: 150px;
+    height: 40px;
+
+    background: rgba(3, 74, 87, 0.5);
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 0 12px 0 12px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    align-self: end;
+
+    transition: 400ms;
+}
+
+form a:hover{
+    background: #fff;
+    color: rgba(3, 74, 87, 0.767);
+
+    text-decoration: none;
+}
+
+form button {
+    background: white;
+    width: 150px;
+    height: 40px;
+
+    border-radius: 12px 0 12px 0;
+
+    cursor: pointer;
+
+    margin-top: 32px;
+    
+    grid-column: 1 2;
+
+    justify-self: end;
+
+    transition: 400ms;
+}
+
+form button:hover {
+    background-color: rgba(3, 74, 87, 0.3);
+    text-decoration: none;
+}
+#modal.hide{
+    opacity: 100ms;
+    visibility: hidden;     
+}
+
+form select
+{
+    background: white;
+    background: white;
+    width: 150px;
+    height: 40px;
+
+    cursor: pointer;
+
+    margin-top: 32px;
+    
+    grid-column: 1 2;
+
+    justify-self: end;
+
+    transition: 400ms;
+}

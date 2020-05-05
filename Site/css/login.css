@@ -1,0 +1,149 @@
+#modal {
+    background-image: url(../img/photo-1495435229349-e86db7bfa013.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.balao h1 {
+    text-align: center;
+    padding-top: 30px;
+}
+
+.balao .register {
+    letter-spacing: 6px;
+}
+
+#modal.addScroll {
+    overflow: auto;
+}
+
+#modal .content {
+    color: white;
+}
+
+#modal .content h1 {
+    text-transform: uppercase;
+}
+
+#modal .register {
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.modal {
+    position: fixed;
+}
+
+.content .register div:nth-child(3),
+.content .register div:nth-child(4),
+.content .register div:nth-child(5) {
+    grid-column: span 2;
+}
+
+.register input,
+.register textarea {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    border: 1px solid rgba(3, 74, 87, 0.5);
+    outline: none;
+    font-size: 16px;
+}
+
+.register label {
+    font-weight: 300;
+    line-height: 32px;
+    letter-spacing: 0.2px;
+}
+
+.balao .interactive {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.balao .interactive {
+    letter-spacing: 10px;
+}
+
+.balao .interactive .voltar a {
+    width: 150px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px 0px 12px 0px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    align-self: end;
+}
+
+.balao .interactive .voltar a {
+    background-color: rgba(0, 82, 149, 0.596);
+    transition: 400ms;
+}
+
+.balao .interactive .voltar a:hover {
+    background: rgba(0, 90, 126, 0.767);
+    color: rgba(255, 255, 255, 0.767);
+}
+
+.balao .interactive button {
+    background-color: white;
+    width: 150px;
+    height: 40px;
+    border-radius: 12px 0 12px 0;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 38px;
+    grid-column: 1 2;
+    justify-self: end;
+    transition: 400ms;
+    border: none;
+}
+
+.balao .interactive button:hover {
+    background-color: rgba(0, 90, 126, 0.767);
+    color: #fff;
+    text-decoration: none;
+}
+
+* #modal.hide {
+    opacity: 100ms;
+    visibility: hidden;
+}
+
+.register select {
+    background: white;
+    background: white;
+    width: 150px;
+    height: 40px;
+    cursor: pointer;
+    grid-column: 1 2;
+    justify-self: end;
+    transition: 400ms;
+}
+
+.fa-envelope::before {
+    color: #2287ca;
+}
+
+.fa-lock::before {
+    color: #2287ca;
+}

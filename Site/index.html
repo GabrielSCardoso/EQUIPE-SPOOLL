@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <title>SPOOLL</title>
+    </head>
+
+    <body>
+
+        <!-- início do site -->
+        <header class="header">
+            <div class="logo">
+                <img href="index.html" src="./img/logo1.png">
+            </div>
+            <input class="menu-btn" type="checkbox" id="menu-btn" />
+            <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+            <ul class="menu">
+                <li class="int-link"><a href="#home">Home</a></li>
+                <li class="int-link"><a href="#simulator">Simulador</a></li>
+                <li class="int-link"><a href="#sobre">Sobre nós</a></li>
+                <li><a href="./contact.html">Contatos</a></li>
+                <li><a href="./login.html"><i class="fas fa-user"></i> Login</a></li>
+            </ul>
+        </header>
+        <section class="imgText" id="home">
+            <img src="./img/fundo.jpg" class="imgFundo">
+            <div class="read">
+                <h1>Seja Bem-Vindo a SPOOLL</h1>
+                <p> Nascemos com a intenção de aprimorar e facilitar o ato de estacionar pela cidade,
+                    consequentemente diminuindo o congestionamento e a poluição atmosférica
+                    melhorando o fluxo de veículos pelas ruas
+                </p>
+            </div>
+        </section>
+
+        <section class="container-card">
+            <div class="card">
+                <lottie-player class="imgCard" src="https://assets8.lottiefiles.com/packages/lf20_uCA94X.json"
+                    background="transparent" speed="1" loop autoplay>
+                </lottie-player>
+                <div class="read">
+                    <h1>Comunicação Governamental</h1>
+                    <p>
+                        A comunicação é uma ferramenta política poderosa e seu impacto junto
+                        à opinião pública traz consequências que são imediatamente refletidas
+                        no posicionamento dos governos.
+                    </p>
+                    <!-- <button class="btn-primary" id="saiba">Saiba mais</button> -->
+                </div>
+            </div>
+
+            <div class="card">
+                <lottie-player class="imgCard" src="https://assets9.lottiefiles.com/packages/lf20_uNwwkb.json"
+                    background="transparent" speed="1" loop autoplay>
+                </lottie-player>
+                <div class="read">
+                    <h1>Assessoria de Imprensa</h1>
+                    <p>
+                        Atuamos como a ponte que ajuda as marcas a construírem
+                        um relacionamento sólido e transparente com a mídia.
+                    </p>
+                    <!-- <button class="btn-primary" id="saiba">Saiba mais</button> -->
+                </div>
+            </div>
+
+            <div class="card">
+                <lottie-player class="imgCard" src="https://assets4.lottiefiles.com/private_files/lf30_vAtD7F.json"
+                    background="transparent" speed="1" loop autoplay>
+                </lottie-player>
+                <div class="read">
+                    <h1>Planejamento e Inteligência</h1>
+                    <p>
+                        Estratégias e ferramentas variadas que potencializam os resultados,
+                        gerando inovação, otimização e competitividade.
+                    </p>
+                    <!-- <button class="btn-primary" id="saiba">Saiba mais</button> -->
+                </div>
+            </div>
+        </section>
+        <section class="container-simulator" id="simulator">
+            <div class="box-simulator">
+                <div class="read">
+                    <h1>Simulador Financeiro</h1>
+                    <p>
+                        Obtenha uma representação financeira sobre seu projeto!
+                    </p>
+                </div>
+                <div class="simulator">
+                    <div class="div_simule">
+                        <h1>Simulador</h1>
+                        <label>Quantidade de vagas:</label>
+                        <input type="number" id="id_total_vagas">
+                        <button onclick="simular()" class="btn-primary">Simular</button>
+                    </div>
+                    <div id="id_div_resultado" class="result">
+                        <h1>Investimento</h1>
+                        <span>Sensores: R$-</span>
+                        <span>Instalação: R$-</span>
+                        <span>Mensalidade: R$-</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- CONTAINER SOBRE NÓS -->
+        <section class="container-sobre" id="sobre">
+            <div class="box-sobre">
+                <div class="read">
+                    <h1>Conheça a Spooll</h1>
+                    <p>
+                        Inovamos com a comunicação integrada desde o início da empresa, em 2020.<br>
+                        Fomos a primeira agência de comunicação que se propôs a entregar soluções<br>
+                        integradas e nos orgulhamos disso.
+                    </p>
+                    <!-- <button class="btn-primary" id="saiba">Saiba mais</button> -->
+                </div>
+                <div>
+                    <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_O1PJ81.json"
+                        background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay>
+                    </lottie-player>
+                </div>
+            </div>
+        </section>
+
+
+
+        <div class="footer">
+            <div class="footer-content">
+                <div class="footer-section location">
+                    <h1>Nossa Localização</h1>
+                    <p>
+                        BandTec Digital School <br>
+                        Rua Haddock Lobo, 595 <br>
+                        Cerqueira César <br>
+                        São Paulo - SP
+                    </p>
+
+                    <div class="spooll">
+                        <p>| BandTec e Equipe <span>SPOOLL</span> |</p>
+                    </div>
+                </div>
+
+                <div class="footer-section redes">
+                    <h1>Siga-nos em Nossa Redes</h1>
+
+                    <div class="redes-social">
+                        <span><i class="fab fa-instagram"></i></span>
+                        <span><i class="fab fa-linkedin-in"></i></span>
+                        <span><i class="fab fa-facebook-f"></i></span>
+                        <span><i class="fab fa-twitter"></i></span>
+                        <span><i class="fab fa-google-plus-g"></i></span>
+                        <span><i class="fab fa-discord"></i></span>
+                    </div>
+                </div>
+
+                <div class="footer-section contate">
+                    <h1>Contate-nos</h1>
+                    <p>
+                        Entre em contato com a nossa equipe e peça <br>
+                        seu sistema de estacionamento ou um site <br>
+                        para sua empresa.
+                    </p>
+
+                    <div class="contact">
+                        <span><i class="fas fa-mail-bulk"> SpoollGrupo11@bandtec.com.br</i></span>
+                        <span><i class="fab fa-whatsapp"> (11) 99999-9999</i></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                &copy; BandTec Digital School | Project SPOOLL |
+                Developed and Designed by the SPOOLL team
+            </div>
+        </div>
+
+    </body>
+
+</html>
+
+<script src="https://kit.fontawesome.com/26d639ee5e.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/main.js"></script>

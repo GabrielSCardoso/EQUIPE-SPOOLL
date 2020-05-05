@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Line Chart</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+		<script src="http://www.chartjs.org/dist/2.7.1/Chart.js"></script>
+		<script src="http://www.chartjs.org/samples/latest/utils.js"></script>
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/scrollProgress.css">
+
+		<style>
+			canvas {
+				-moz-user-select: none;
+				-webkit-user-select: none;
+				-ms-user-select: none;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!-- Effect Scroll progress Index -->
+		<div id="progressBar"></div>
+		<div id="scrollPath"></div>
+
+		<!-- início do site -->
+		<header class="header">
+			<div class="logo">
+				<img href="index.html" src="./img/logo1.png">
+			</div>
+			<input class="menu-btn" type="checkbox" id="menu-btn" />
+			<label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+			<ul class="menu">
+				<li class="int-link"><a href="#home">Home</a></li>
+				<li class="int-link"><a href="#simulator">Simulador</a></li>
+				<li class="int-link"><a href="#sobre">Sobre nós</a></li>
+				<li><a href="./contact.html">Contatos</a></li>
+				<li><a href="./login.html"><i class="fas fa-user"></i> Login</a></li>
+			</ul>
+		</header>
+
+		<div class="grafico-temp">
+			<h2>Média: <label id='average'>0.00</label></h2>
+			<h2>Média Hora: <label id='averageHour'>0.00</label></h2>
+			<div style="width: 99%;">
+				<canvas id="chart"></canvas>
+			</div>
+			<script>
+				var context = document.getElementById("chart").getContext("2d");
+				context.canvas.width = 1000;
+				context.canvas.height = 300;
+
+				var configuration = {
+					type: 'line',
+					data: {
+						datasets: [{
+							label: "Temperature x Time",
+							type: 'line',
+							// backgroundColor: "#0066ff",
+						}]
+					},
+					options: {
+						scales: {
+							xAxes: [{
+								//type: 'value',
+								distribution: 'series',
+								ticks: {
+									beginAtZero: true
+								}
+							}],
+							yAxes: [{
+								scaleLabel: {
+									display: true,
+									labelString: 'Temperature'
+								},
+								ticks: {
+									beginAtZero: true
+								}
+							}]
+						},
+						animation: {
+							duration: 0
+						}
+					}
+				};
+
+				var chart = new Chart(context, configuration);
+
+				//Função para obter os dados de temperatura do server
+				//Seria mais interessante fazer isso com WebSocket, porém para fins academicos, os dados serão atualizados via HTTP
+
+				//Esse atributo dentro do contexto serve para saber qual foi o último índice processado, assim eliminado os outros elementos na
+				//hora de montar/atualizar o gráfico
+				this.lastIndexTemp = 0;
+				this.time = 0;
+
+				function get_data() {
+
+					var http = new XMLHttpRequest();
+					http.open('GET', 'http://localhost:3000/api', false);
+					http.send(null);
+
+					var obj = JSON.parse(http.responseText);
+					console.log(obj)
+					if (obj.data.length == 0) {
+						return;
+					}
+
+					var _lastIndexTemp = this.lastIndexTemp;
+					this.lastIndexTemp = obj.data.length;
+					listTemp = obj.data.slice(_lastIndexTemp);
+
+					listTemp.forEach(data => {
+						//Máximo de 60 itens exibidos no gráfico
+						if (chart.data.labels.length == 10 && chart.data.datasets[0].data.length == 10) {
+							chart.data.labels.shift();
+							chart.data.datasets[0].data.shift();
+						}
+
+						chart.data.labels.push(this.time++);
+						chart.data.datasets[0].data.push(parseFloat(data));
+						chart.update();
+					});
+
+					document.getElementById('average').textContent = obj.average;
+					document.getElementById('averageHour').textContent = obj.averageHour;
+				}
+
+				get_data();
+
+				setInterval(() => {
+					get_data();
+				}, 1000);
+			</script>
+			</section>
+		</div>
+
+		<div class="footer">
+			<div class="footer-content">
+				<div class="footer-section location">
+					<h1>Nossa Localização</h1>
+					<p>
+						BandTec Digital School <br>
+						Rua Haddock Lobo, 595 <br>
+						Cerqueira César <br>
+						São Paulo - SP
+					</p>
+
+					<div class="spooll">
+						<p>| BandTec e Equipe <span>SPOOLL</span> |</p>
+					</div>
+				</div>
+
+				<div class="footer-section redes">
+					<h1>Siga-nos em Nossa Redes</h1>
+
+					<div class="redes-social">
+						<span><i class="fab fa-instagram"></i></span>
+						<span><i class="fab fa-linkedin-in"></i></span>
+						<span><i class="fab fa-facebook-f"></i></span>
+						<span><i class="fab fa-twitter"></i></span>
+						<span><i class="fab fa-google-plus-g"></i></span>
+						<span><i class="fab fa-discord"></i></span>
+					</div>
+				</div>
+
+				<div class="footer-section contate">
+					<h1>Contate-nos</h1>
+					<p>
+						Entre em contato com a nossa equipe e peça <br>
+						seu sistema de estacionamento ou um site <br>
+						para sua empresa.
+					</p>
+
+					<div class="contact">
+						<span><i class="fas fa-mail-bulk"> SpoollGrupo11@bandtec.com.br</i></span>
+						<span><i class="fab fa-whatsapp"> (11) 99999-9999</i></span>
+					</div>
+				</div>
+			</div>
+
+			<div class="footer-bottom">
+				&copy; BandTec Digital School | Project SPOOLL |
+				Developed and Designed by the SPOOLL team
+			</div>
+		</div>
+	</body>
+
+</html>
+
+<script src="https://kit.fontawesome.com/26d639ee5e.js" crossorigin="anonymous"></script>
+<script src="scrollProgress.js"></script>

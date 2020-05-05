@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="adm.css">
+    <script src="adm.js"></script>
+    <title>Estacionamento</title>
+</head>
+
+<body>
+    <section>
+        <div class="cardboxleft">
+            <div class="conteudoleft">
+                <h1>Página</h1>
+                <ul>
+                    <li><a href="adm_inicial.html">Geral</a></li>
+                    <li><a href="adm.html">Gerar Relatório</a></li>
+                </ul>
+                <hr>
+                <h1>Ferramenta</h1>
+                <ul>
+                    <li><a href="adm_config.html">Configuração</a></li>
+                    <li><a href="adm Suporte.html">Suporte</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="cardboxright admGeral">
+            <div class="titulo">
+                <h1>Estacionamento</h1>
+                <p>Resultado da pagina</p>
+            </div>
+
+            <div class="boxright">
+                <div class="subtitulo">
+                    <h1>Visão Geral</h1>
+                </div>
+                <div class="pageGeral">
+                    <div class="bloco">
+                        <h1>Estacionamento</h1>
+                        <label for="">Quantidade de vagas: <b>180</b></label>
+                        <label for="">Quantidade de vagas cobertas: <b>16</b></label>
+                        <h1>Endereço</h1>
+                        <label>Rua: <b>Avenida Paulista, 439</b></label>
+                        <label>Bairro: <b>Paraiso</b></label>
+                        <label>Cidade: <b>São Paulo</b></label>
+                        <label>Estado: <b>SP</b></label>
+                        <label>CEP: <b>01310-000</b></label>
+                    </div>
+                    <div class="bloco">
+                        <h1>Estatisticas</h1>
+                        <p>Recomendaram: <b>230  </b><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></p>
+                        <p>Não recomendaram: <b>95  </b><i class="fa fa-thumbs-down" aria-hidden="true"></i></p>
+                        <div class="comentarios">
+                            <h1>Comentarios</h1>
+                            <div class="boxComentario" id="boxComentario"></div>
+                            <button id="verificar_comentario" onclick="teste()">
+                                Verificar todos os comentarios
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+</body>
+
+</html>
+<script src="https://kit.fontawesome.com/26d639ee5e.js" crossorigin="anonymous"></script>

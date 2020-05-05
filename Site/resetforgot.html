@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/form.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/26d639ee5e.js" crossorigin="anonymous"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/main.js"></script>
+    <title>Document</title>
+
+</head>
+
+<body>
+    <section class="forgot text">
+        <div class="box-forgot">
+            <h1>Recuperar Senha</h1>
+            <form action="">
+                <div class="read">
+                    <label for="">Nova Senha</label>
+                    <input type="password" placeholder="Nova senha" id="txtPass" oninput="testaSenha()">
+                    <i class="fa fa-lock icone" aria-hidden="true"></i>
+                </div>
+                <div class="read">
+                    <label for="">Confirmar senha</label>
+                    <input type="password" placeholder="Corfirmar senha" id="txtConfirm" oninput="testaSenha()">
+                    <i class="fa fa-lock icone"></i>                
+                </div>
+                <button id="btnEnviar" class="btn" alt="teste">Mudar senha</button>
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>
+<script>
+    var botao = document.getElementById("btnEnviar");
+    function testaSenha() {
+        var target = ('.btn'),
+            colorClass = 'btnform';
+            senha = document.getElementById("txtPass").value,
+            confirmaSenha = document.getElementById("txtConfirm").value;
+
+        if (senha != confirmaSenha || senha == "" && confirmaSenha == "" || senha.length <= 5 || confirmaSenha.length <= 5) {
+            botao.disabled = true;
+            $(target).removeClass(colorClass);
+        } else {
+            botao.disabled = false;
+            $(target).addClass(colorClass);
+        }
+    }
+    window.onload = testaSenha();
+
+</script>

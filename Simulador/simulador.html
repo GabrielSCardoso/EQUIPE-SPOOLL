@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador</title>
+    <link rel="stylesheet" href="simulador.css">
+</head>
+
+<body>
+    <header class="header">
+        <img class="logo" src="./img/logo_sem_fundo.png" alt="">
+        <nav>
+            <ul class="menu">
+                <li>
+                    <a href="#">A Spooll</a>
+                </li>
+                <li>
+                    <a href="#">Simulador</a>
+                </li>
+                <li>
+                    <a href="#">Clientes</a>
+                </li>
+                <li>
+                    <a href="#">Contatos</a>
+                </li>
+                <li>
+                    <img src="./img/login.png">
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+
+        <div class="div_simule">
+            Quantidade de vagas:
+            <br>
+            <input type="number" id="id_total_vagas">
+            <br>
+            <button onclick="simular()">Simular</button>
+            <br>
+        </div>
+        <div id="id_div_resultado">
+
+        </div>
+        <br>
+
+    </div>
+</body>
+
+</html>
+
+<script>
+    function simular() {
+        var total_vagas = Number(id_total_vagas.value);
+        var valor_sensores = total_vagas * 10;
+        var valor_instalação = total_vagas;
+        var valor_mensalidade = total_vagas;
+        id_div_resultado.style.display = "flex";
+        id_div_resultado.innerHTML = `
+        <h1>Investimento</h1> <br>
+            Sensores: R$:${valor_sensores.toFixed(2)} <br>
+            Instalação: R$:${valor_instalação.toFixed(2)} <br>
+        Mensalidade: R$: ${valor_mensalidade.toFixed(2)} 
+        
+        `;
+    }
+</script>

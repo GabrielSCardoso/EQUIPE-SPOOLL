@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Login</title>
+</head>
+<body style="background-image: url(background.jpg)">
+
+    <div class="login">
+        <img src="icone-logo.jpg" class="usuario" width="150px" height="100px">
+        <h1>Login</h1>
+        <form>
+
+            <p>Usuário</p>
+            <input type="text" name="" placeholder="Insira seu email">
+            <p>Senha</p>
+            <input type="password" placeholder="Insira sua senha">
+            <button>Enviar</button>
+            <section class="link">
+            <a href="#">Esqueceu sua senha?</a>
+            <a href="#" onclick="onoff()">Ainda não possui cadastro?</a>
+            </section>
+
+        </form>
+
+    </div>
+    
+    <!--Modal-->
+<div id="modal" class="hide">
+        <div class="balao">
+            <h1>Cadastrar</h1>
+    
+            <form action="">
+                <div class= "input_wrapper">
+                    <label for="">Nome Completo</label>
+                    <input type="text" name="nome">
+                </div>
+                
+                <div class= "input_wrapper">
+                    <label for="">CPF/CNPJ</label>
+                    <input type="number" name="documento">
+                </div>
+    
+                <div class= "input_wrapper">
+                    <label for="">Telefone</label>
+                    <input type="number" name="telefone">
+                </div>
+    
+                <div class= "input_wrapper">
+                    <label for="">Celular</label>
+                    <input type="number" name="celular">
+                </div>
+    
+                <div class="input_wrapper">
+                    <label for="">Tipo</label>
+                    <select id="">
+                        <option value="motorista">Motorista</option>
+                        <option value="proprietario">Proprietario</option>
+                    </select>
+                </div>
+    
+                <div class= "input_wrapper">
+                    <label for="">Estado</label>
+                    <input type="text" name="estado">
+                </div>
+    
+                <div class= "input_wrapper">
+                    <label for="">Cidade</label>
+                    <input type="text" name="cidade">
+                </div>
+    
+                <div class= "input_wrapper">
+                    <label for="">Rua</label>
+                    <input type="text" name="rua">
+                </div>
+    
+                <div class= "input_wrapper">
+                    <label for="">Numero</label>
+                    <input type="number" name="numero">
+                </div>
+    
+                <div class= "input_wrapper">
+                    <label for="">Complemento</label>
+                    <input type="text" name="complemento">
+                </div>
+                <a href="index.html">Voltar</a>
+                <button>
+                    Enviar
+                </button>
+                
+            </form>
+        </div>
+    
+    </div>
+
+
+</body>
+</html>
+
+<script src="javascript.js"></script>
